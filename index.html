@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomasz Mazur | Kompleksowe Remonty Łazienek Ostrowiec</title>
+    
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root { 
+            --primary: #2c3e50; 
+            --accent: #e67e22; 
+            --light: #ecf0f1; 
+            --white: #ffffff; 
+        }
+
+        * { box-sizing: border-box; scroll-behavior: smooth; }
+
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0; 
+            color: #333; 
+            line-height: 1.6; 
+            background-color: var(--white);
+        }
+
+        /* Sekcja Hero - Twoje zdjęcie */
+        header { 
+            height: 85vh; 
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/hed.jfif');
+            background-size: cover; 
+            background-position: center 30%; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            text-align: center; 
+            color: white; 
+            padding: 20px;
+        }
+
+        .badge { 
+            background: var(--accent); 
+            padding: 8px 20px; 
+            border-radius: 20px; 
+            font-weight: bold; 
+            margin-bottom: 20px; 
+            text-transform: uppercase; 
+            font-size: 0.9rem; 
+        }
+
+        header h1 { font-size: 3.5rem; margin: 0; text-transform: uppercase; }
+        header p { font-size: 1.5rem; max-width: 800px; margin: 20px 0; font-weight: 300; }
+
+        /* Atuty - Kafelki nad tłem */
+        .features { 
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: center; 
+            gap: 30px; 
+            padding: 0 10% 50px; 
+            background: var(--light); 
+        }
+
+        .f-box { 
+            background: white; 
+            padding: 30px; 
+            border-radius: 10px; 
+            width: 280px; 
+            text-align: center; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+            transform: translateY(-50px);
+        }
+
+        .f-box i { font-size: 2.5rem; color: var(--accent); margin-bottom: 15px; }
+
+        /* Oferta */
+        .services { padding: 60px 10% 100px; text-align: center; }
+        .s-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; }
+        
+        .s-item { 
+            text-align: left; 
+            padding: 30px; 
+            border-left: 5px solid var(--accent); 
+            background: #f9f9f9; 
+            transition: 0.3s;
+        }
+        
+        .s-item h3 { margin-top: 0; color: var(--primary); display: flex; align-items: center; gap: 10px; }
+
+        /* Sekcja Kontakt */
+        .trust-section { background: var(--primary); color: white; padding: 100px 10%; text-align: center; }
+        
+        .btn-call { 
+            display: inline-block; 
+            background: var(--accent); 
+            color: white; 
+            padding: 20px 45px; 
+            text-decoration: none; 
+            border-radius: 5px; 
+            font-weight: bold; 
+            font-size: 1.3rem; 
+            margin-top: 30px; 
+            transition: 0.3s; 
+        }
+
+        .btn-call:hover { transform: scale(1.05); background: #d35400; }
+
+        /* --- STYL DLA COOKIES --- */
+        #cookie-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            background: #ffffff !important;
+            color: #333 !important;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 -5px 25px rgba(0,0,0,0.3);
+            z-index: 999999;
+            display: none;
+            border-top: 5px solid var(--accent);
+        }
+
+        #cookie-bar button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 30px;
+            margin-left: 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        footer { padding: 40px 10%; text-align: center; font-size: 0.9rem; color: #777; }
+
+        /* RWD */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.2rem; }
+            header p { font-size: 1.1rem; }
+            .f-box { transform: translateY(0); margin-bottom: 20px; width: 100%; }
+            #cookie-bar button { margin-top: 10px; width: 100%; margin-left: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="badge">15 lat doświadczenia w branży</div>
+        <h1>Tomasz Mazur</h1>
+        <p>Kompleksowe remonty łazienek w Ostrowcu Świętokrzyskim. Profesjonalizm, na którym możesz polegać.</p>
+        <a href="#kontakt" class="btn-call">DARMOWA WYCENA</a>
+    </header>
+
+    <section class="features">
+        <div class="f-box">
+            <i class="fas fa-tools"></i>
+            <h3>Fachowość</h3>
+            <p>15 lat na rynku to gwarancja braku niespodzianek.</p>
+        </div>
+        <div class="f-box">
+            <i class="fas fa-check-double"></i>
+            <h3>Kompleksowość</h3>
+            <p>Od hydrauliki po ostatnią płytkę. Robię wszystko.</p>
+        </div>
+        <div class="f-box">
+            <i class="fas fa-user-shield"></i>
+            <h3>Gwarancja</h3>
+            <p>Solidność i terminowość to moje priorytety.</p>
+        </div>
+    </section>
+
+    <section class="services">
+        <h2>Moja Specjalizacja</h2>
+        <div class="s-grid">
+            <div class="s-item">
+                <h3><i class="fas fa-layer-group"></i> Układanie glazury</h3>
+                <p>Precyzyjne kafelkowanie, gresy wielkoformatowe i szlifowanie 45°.</p>
+            </div>
+            <div class="s-item">
+                <h3><i class="fas fa-ruler-combined"></i> Zabudowy G/K</h3>
+                <p>Ścianki działowe, sufity podwieszane i zabudowy stelaży.</p>
+            </div>
+            <div class="s-item">
+                <h3><i class="fas fa-faucet"></i> Hydraulika i Elektryka</h3>
+                <p>Przenoszenie punktów wodnych oraz montaż armatury i oświetlenia.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="trust-section" id="kontakt">
+        <h2>Szukasz sprawdzonego fachowca w Ostrowcu?</h2>
+        <p>Nie marnuj czasu na poprawki po amatorach. Postaw na doświadczenie.</p>
+        <a href="tel:+48601 059 005" class="btn-call"><i class="fas fa-phone"></i> ZADZWOŃ: +48 601 059 005</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Tomasz Mazur - Remonty Łazienek Ostrowiec Św. | Projekt: KR0-DEV</p>
+    </footer>
+
+    <div id="cookie-bar">
+        <span>Ta strona używa plików cookies dla Twojej wygody.</span>
+        <button onclick="acceptCookies()">Rozumiem</button>
+    </div>
+
+    <script>
+        function acceptCookies() {
+            localStorage.setItem('mazurCookiesV2', 'true');
+            document.getElementById('cookie-bar').style.display = 'none';
+        }
+
+        window.addEventListener('load', function() {
+            if (!localStorage.getItem('mazurCookiesV2')) {
+                document.getElementById('cookie-bar').style.display = 'block';
+            }
+        });
+    </script>
+
+</body>
+</html>
